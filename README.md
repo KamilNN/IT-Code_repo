@@ -1,4 +1,4 @@
-# IT-Code_repo-5
+# IT-Code_repo-6
 In [5]: models.Book.objects.all()
 Out[5]: <QuerySet [<Book: Дети капитана Гранта>, <Book: Марсианские Хроники>, <Book: Оно>, <Book: 451 Градус по Фаренгейту>]>
 
