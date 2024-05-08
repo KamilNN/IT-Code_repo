@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from datetime import datetime
+from . import models
 
-current_datetime = datetime.now()
 
 def index(request):
-    return HttpResponse(current_datetime)
+    books = models.Book.objects.all()
+    return render(request, 'core/index.html', {'books': books, 'title': 'Список книг'})

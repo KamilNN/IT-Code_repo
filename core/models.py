@@ -3,7 +3,7 @@ from django.db.models import CharField
 
 
 class Book(models.Model):
-
+    objects = models.Manager()
     TYPE_CHOICES = (
         ('science-fiction', 'Научная фантастика'),
         ('adventure', 'Приключения'),
@@ -14,7 +14,9 @@ class Book(models.Model):
     author = models.CharField('Автор', max_length=40, default='Неизвестно')
     genre = models.CharField('Жанр', max_length=40, choices=TYPE_CHOICES, default='Неизвестно')
     description = models.TextField('Описание', blank=True)
+    picture = models.ImageField('Фото обложки', upload_to='pictures', blank=True)
     price = models.DecimalField('Цена книги', max_digits=5, decimal_places=2, default=0)
+    where_kept = models.ForeignKey()
 
     class Meta:
         verbose_name = "Книга"
