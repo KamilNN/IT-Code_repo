@@ -24,7 +24,7 @@
         <div class="card-body">
             <h5 class="card-title"> {{ item.name }}</h5>
             <p class="card-text"> {{ item.description }} </p>
-            <p><img src="{{ item.picture.get_absolute_url }}" alt="Photo" width="300" height="400"></p>
+            <p><img src="media/{{ item.picture }}" alt="Photo" width="300" height="400"></p>
             <p><a href="#" class="btn btn-primary">Read more...</a></p>
         </div>
         <div class="card-footer text-body-secondary">

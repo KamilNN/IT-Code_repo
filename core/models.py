@@ -12,7 +12,7 @@ class Book(models.Model):
     description = models.TextField('Описание', blank=True)
     picture = models.ImageField('Фото обложки', upload_to='pictures', blank=True)
     price = models.DecimalField('Цена книги', max_digits=5, decimal_places=2, default=0)
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория', null=True)
+    category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория', null=True, blank=True)
 
     class Meta:
         verbose_name = "Книга"
