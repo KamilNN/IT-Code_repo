@@ -1,2 +1,4 @@
-django
+django~=4.2.13
 flake8
+djangorestframework~=3.15.1
+django-filter~=24.2
